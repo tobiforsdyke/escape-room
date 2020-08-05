@@ -5,14 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photosphere</title>
     <link rel="stylesheet" href="inc/css/general.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
+    <link rel="stylesheet" href="node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.css"/>
 
-    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+    <script src="node_modules/three/build/three.js"></script>
+    <script src="node_modules/promise-polyfill/dist/polyfill.js"></script>
+    <script src="node_modules/uevent/browser.js"></script>
+    <script src="node_modules/photo-sphere-viewer/dist/photo-sphere-viewer.js"></script>
+    <!-- <script src="node_modules/nosleep.js/dist/NoSleep.js"></script> -->
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script> -->
+    <script src="node_modules/photo-sphere-viewer/dist/plugins/markers.js"></script>
+    <script src="node_modules/photo-sphere-viewer/dist/plugins/gyroscope.js"></script>
+    <script src="node_modules/photo-sphere-viewer/dist/plugins/stereo.js"></script>
+    <link rel="stylesheet" href="node_modules/photo-sphere-viewer/dist/plugins/markers.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
     <div id="viewer"></div>
+
+    
+
+    <!-- text used for the marker description -->
+<script type="text/template" id="pin-content">
+<h1>HTML Ipsum Presents</h1>
+
+<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas.
+    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+    semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien
+    ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
+    Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a
+    href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+<h2>Header Level 2</h2>
+
+<ol>
+    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+    <li>Aliquam tincidunt mauris eu risus.</li>
+</ol>
+
+<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet
+    congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus
+    est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+<img src="http://localhost/escape-room/inc/assets/pin-red.png" style="width:100%"/>
+</script>
+
+
 
     
     <script src="inc/js/scripts.js"></script>
