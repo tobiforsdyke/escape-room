@@ -7,7 +7,7 @@ const VIEWER = new PhotoSphereViewer.Viewer({
   // minFov: '30',
   // maxFov: '90',
   defaultZoomLvl: '20',
-  autorotateDelay: '5000',
+  // autorotateDelay: '5000',
   navbar    : [
     'autorotate', 'zoom', 'markers', 'markersList',
     {
@@ -121,7 +121,7 @@ const VIEWER = new PhotoSphereViewer.Viewer({
 
         a.push({
           id        : 'polygon-chair',
-          content   : 'This is a chair',
+          content   : document.getElementById('chair-content').innerHTML,
           polylinePx: [
             [677, 719],
             [676, 653],
@@ -161,7 +161,7 @@ const VIEWER = new PhotoSphereViewer.Viewer({
 
         a.push({
           id       : 'text',
-          html     : 'This <b>is</b> text <img src="http://localhost/escape-room/inc/assets/pin-red.png" style="height: 24px; vertical-align: top;"/>',
+          html     : 'This is <strong>text</strong <img src="http://localhost/escape-room/inc/assets/pin-red.png" style="height: 24px; vertical-align: top;"/>',
           anchor   : 'bottom right',
           style    : {
             color     : 'white',
@@ -186,20 +186,6 @@ const VIEWER = new PhotoSphereViewer.Viewer({
           longitude: -0.5,
           latitude : -0.38,
           anchor   : 'center right',
-        });
-
-        a.push({
-          id       : 'path',
-          tooltip  : 'A custom path',
-          path     : 'M 0 0 L 60 60 L 60 0 L 0 60 L 0 0',
-          svgStyle : {
-            fill       : 'rgba(255,255,0,0.3)',
-            stroke     : 'yellow',
-            strokeWidth: '2px',
-          },
-          longitude: -0.5,
-          latitude : -0.38,
-          anchor   : 'center left',
         });
 
         return a;
